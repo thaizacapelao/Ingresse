@@ -24,3 +24,9 @@ function adicionar() {
   valorTotal.innerHTML = `<span class="texto-azul" id="valor-total">R$${totalGeral}</span>`;
   document.getElementById("quantidade").value = 0;
 }
+
+function limpar() {
+    totalGeral = 0;
+    document.getElementById("lista-produtos").innerHTML = "";
+    document.getElementById("valor-total").textContent = "R$ 0";
+  }
