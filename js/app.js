@@ -1,5 +1,5 @@
-let qntCadeiraSuperior = 200;
-let qntCadeiraInferior = 400;
+// let qntCadeiraSuperior = 200;
+// let qntCadeiraInferior = 400;
 
 function comprar() {
     let tipoIngresso = document.getElementById('tipo-ingresso');
