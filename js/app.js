@@ -4,18 +4,23 @@
 
 function comprar() {
     let qtdCompra = parseInt(document.getElementById('qtd').value);
+    
+    if (isNaN(qtdCompra) || qtdCompra <= 0) {
+        alert("Por favor, insira uma quantidade válida e positiva.");
+        return;
+    }
+    
     let tipoIngresso = document.getElementById('tipo-ingresso');
-
+    
     if (tipoIngresso.value == "pista") {
         comprarPista(qtdCompra);
-        limparCampos();
     } else if (tipoIngresso.value == "superior") {
         comprarSuperior(qtdCompra);
-        limparCampos();
     } else {
         comprarInferior(qtdCompra);
-        limparCampos();
     }
+
+    limparCampos();
 }
 
 function comprarPista(qtd) {
@@ -54,6 +59,17 @@ function comprarPista(qtd) {
  function limparCampos() {
   document.getElementById("qtd").value = "";
  }
+
+ function converterStringParaInteiro(str) {
+    let numero = parseInt(str);
+    
+    if (isNaN(numero)) {
+        alert("O valor inserido não é um número válido.");
+        return null;
+    }
+
+    return numero;
+}
 
 // function comprarIngresso(ingressoElementId, tipoIngresso, qtdCompra) {
 //     let qtdTotal = parseInt(
