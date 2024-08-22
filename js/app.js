@@ -8,17 +8,20 @@ function comprar() {
 
     if (tipoIngresso.value == "pista") {
         comprarPista(qtdCompra);
-    } else  if (tipoIngresso.value == "superior") {
+        limparCampos();
+    } else if (tipoIngresso.value == "superior") {
         comprarSuperior(qtdCompra);
+        limparCampos();
     } else {
         comprarInferior(qtdCompra);
+        limparCampos();
     }
 }
 
 function comprarPista(qtd) {
     let qtdPista = parseInt(document.getElementById('qtd-pista').textContent);
       if (qtd > qtdPista) {
-        alert("Quantidade de ingressos indisponível para a pista!");
+        alert("Quantidade de ingressos indisponível para a pista :(");
       } else {
         qtdPista = qtdPista - qtd;
         document.getElementById("qtd-pista").textContent = qtdPista;
@@ -29,7 +32,7 @@ function comprarPista(qtd) {
  function comprarSuperior(qtd) {
     let qtdSuperior = parseInt(document.getElementById('qtd-superior').textContent);
       if (qtd > qtdSuperior) {
-        alert("Quantidade de ingressos indisponível para a Superior!");
+        alert("Quantidade de ingressos indisponível para a área Superior :(");
       } else {
         qtdSuperior = qtdSuperior - qtd;
         document.getElementById("qtd-superior").textContent = qtdSuperior;
@@ -40,12 +43,16 @@ function comprarPista(qtd) {
  function comprarInferior(qtd) {
     let qtdInferior = parseInt(document.getElementById('qtd-inferior').textContent);
       if (qtd > qtdInferior) {
-        alert("Quantidade de ingressos indisponível para a Superior!");
+        alert("Quantidade de ingressos indisponível para a área Inferior :(");
       } else {
         qtdInferior = qtdInferior - qtd;
         document.getElementById("qtd-inferior").textContent = qtdInferior;
         alert("Compra realizada com Sucesso.");
       }
+ }
+
+ function limparCampos() {
+  document.getElementById("qtd").value = "";
  }
 
 // function comprarIngresso(ingressoElementId, tipoIngresso, qtdCompra) {
