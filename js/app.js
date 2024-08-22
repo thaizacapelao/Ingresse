@@ -47,3 +47,17 @@ function comprarPista(qtd) {
         alert("Compra realizada com Sucesso.");
       }
  }
+
+// function comprarIngresso(ingressoElementId, tipoIngresso, qtdCompra) {
+//     let qtdTotal = parseInt(
+//       document.getElementById(ingressoElementId).textContent
+//     );
+  
+//     if (qtd > qtdTotal) {
+//       alert(`Quantidade de ingressos indisponível para a ${tipoIngresso}!`);
+//     } else {
+//       qtdTotal = qtdTotal - qtdCompra;
+//       document.getElementById(ingressoElementId).textContent = qtdTotal;
+//       alert("Compra realizada com Sucesso.");
+//     }
+//   }
