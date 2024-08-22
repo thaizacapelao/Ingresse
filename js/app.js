@@ -10,7 +10,7 @@ function comprar() {
         comprarPista(qtdCompra);
     } else  if (tipoIngresso.value == "superior") {
         comprarSuperior(qtdCompra);
-    } else  if (tipoIngresso.value == "inferior") {
+    } else {
         comprarInferior(qtdCompra);
     }
 }
